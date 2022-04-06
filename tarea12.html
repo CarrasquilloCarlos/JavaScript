@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula</title>
+    
+    <link rel="stylesheet" href="C:\Users\ccarrasquillo4392\OneDrive - NUC University Online\Desktop\Tarea 1.1\global.css">
+    <!-- Carlos Carrasquillo
+    17 de marzo de 2022-->
+</head>
+<body>
+    
+    <h2>Cursos Matriculados</h2>
+    <article>
+        <script>
+            var curso1="PROG 2390L";
+            var curso2="INTE 2570L";
+            var curso3="PROG 2480L";
+            var descripcion1="Introduccion Javascript & Lab.";
+            var descripcion2="Network Administration & Lab.";
+            var descripcion3="Analysis and Design & Lab.";
+            var credito="3.0";
+        </script>
+    <table>
+        <thead>
+            <tr>
+                <th>Curso</th>
+                <th>Descripcion de Curso</th>
+                <th>Credito(s)</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td><script>document.write(curso1)</script></td>
+              <td><script>document.write(descripcion1)</script></td>
+              <td class="credito"><script>document.write(credito)</script></td>
+          </tr>
+          <tr>
+              <td><script>document.write(curso2)</script></td>
+              <td><script>document.write(descripcion2)</script></td>
+              <td class="credito"><script>document.write(credito)</script></td>
+          </tr> 
+          <tr>
+              <td><script>document.write(curso3)</script></td>
+              <td><script>document.write(descripcion3)</script></td>
+              <td class="credito"><script>document.write(credito)</script></td>
+          </tr> 
+        </tbody>
+    </table>
+    </article>
+    <button type="button" id="Total Créditos" onclick="calcTotal()">"Total Créditos"</button>
+    <p id="demo"></p>
+    <script>
+        
+        function calcTotal() {
+        var credits=document.getElementsByClassName("credito");
+        var count= credits.length;
+        var total= count*3;
+        document.getElementById("demo").innerHTML=total;
+        //alert(total)
+
+
+        
+           
+            
+            
+    
+            
+        }
+         
+    </script> 
+     
+
+   
+   
+</body>
+</html>
+        
