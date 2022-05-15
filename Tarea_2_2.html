@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de artículos</title>
+    <!-- Carlos Carrasquillo Surillo-->
+    
+
+</head>
+<body>
+    <article>
+    <h2>Ingrese los artículos sugeridos:</h2>
+    <form>
+        <input type="text" id="item">
+        <input type="button" id="add" value="Añadir">
+        <label for=""></label>
+
+
+    </form>
+    <ol id="list"> </ol>
+    <label id="gracias"></label>
+    </article>
+    
+<script>
+    function processInput()
+    {
+        var i = ",";
+        var listItem = "";
+        if (document.getElementById("item").value != "")
+        {
+        
+        var item = document.createElement("li");
+        i = document.getElementById("item").value;
+        listitem = "Sugerencia de articulo: " + i;
+        item.innerHTML = listitem;
+        document.getElementById("list").appendChild(item);
+        document.getElementById("item").value= "";
+    }
+        if (document.getElementById("list").childElementCount == 5)
+        {
+            document.getElementById("add").disabled = true;
+            document.getElementById("gracias").innerHTML = "Gracias por su sugerencia!";
+        }
+    }
+        if (document.getElementById("add").addEventListener)
+        {
+            document.getElementById("add").addEventListener("click",processInput,false);
+        }
+        else if (document.getElementById("add").attachEvent)
+        {
+            document.getElementById("add").attachEvent("onclick",processInput);
+        }
+        
+
+    
+</script>
+
+    
+
+        
+    
+
+    
+        
+      
+    
+</body>
+</html>
