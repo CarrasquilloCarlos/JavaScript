@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3.1</title>
+    <!-- Carlos Carrsaquillo Surillo-->
+    <!-- 18 de mayo del 2022-->
+    
+        <!-- En esta tarea, crearás una aplicación web en un arreglo (array) que contenga una lista de cinco elementos. La aplicación tendrá una función que permitirá desplegar los cinco elementos del arreglo en la página web en forma de listado   -->
+        </head>
+        
+        <!-- Paso 3 Dentro del elemento artículo, debajo del elemento h2, entra la etiqueta <script>, inserta un espacio en blanco y especifica el elemento </script> para crear una nueva sección de 
+        secuencia de comandos.   -->
+        <article>
+          <h2>Lista de contactos favoritos</h2>              
+        </article>   
+        
+        <ol id="list"> </ol>
+        <script>
+        
+         /*Paso 4 Dentro de la sección de secuencia de comandos, crea una variable global llamada contactos. El valor de los contactos debe ser una matriz que debe rellenarse con los nombres de cinco contactos de tu elección. (5 puntos)  */
+        
+          function contactosFavoritos()
+          {
+        /* Paso 5 Crea una función con el nombre contactosFavoritos() que contenga una variable contadora con un valor inicial de 0. Codifica una estructura de repetición con las siguientes acciones: (15 puntos)  */
+          
+            //Paso 4 Creación de la variable global tipo array 
+            var contactos=["Mayné", "Jan", "Luis", "Cesar", "Leslie"];
+            
+         /* Paso 5-a,b Asigna el valor del elemento a 
+         la variable contadora del arreglo. */
+            
+            //asignar el valor del tamaño del array 
+            var arrayLength = contactos.length;
+            
+            //ver el número del tamaño en la consola
+            console.log(arrayLength);
+        
+              
+        //Paso 5 Estructura de control repeticional "for"
+                        /* Paso 5-a,b Asigna el valor del elemento a 
+                        la variable contadora del arreglo. */
+                
+                        /*  La variable con el nombre "contador" 
+                    la configuré let para designar su scope 
+                    solo al bloque del "for". 
+                    Use la variable "arrayLength" para 
+                    limitar las iteraciones del "for" 
+                    al tamaño del array */
+               for(let contador = 0; contador < arrayLength; contador++)
+                {
+        
+                  /* la variable "ver" es utilizada para que
+                      vincule la etiqueta <ol> de html que tiene 
+                      su id = "list" y luego escribiremos dentro
+                      los <li> con los contactos */
+                            let ver = document.getElementById("list");
+                            ver.innerHTML += "<li>"+contactos[contador] + "</li>";
+                            
+                } // fin del for
+            
+        // Paso 6 Añade el siguiente código en la función contactosFavoritos():(5 puntos)       
+            if (window.addEventListener) 
+            { 
+              window.addEventListener("load", contactosFavoritos, false); 
+            }
+            else if (window.attachEvent) 
+            { 
+              window.attachEvent("onload", contactosFavoritos); 
+            } 
+        } // fin de la función
+          
+        //Paso 7 Luego del cierre } de la codificación de la función, introduce el código necesario para crear un detector de eventos que verifique si el código JavaScript es compatible con versiones anteriores de Internet Explorer.  (3 puntos) 
+          
+            //aquí llamamos al evento "load" de la ventana del browser ("window") para que cuando cargue ejecute la función que creamos de forma automática.  Los browser modernos reconocen mejor el evento "DOMContentLoaded" en vez de el "load", por lo que recomiendo utilizar este último para acelerar el proceso de carga y ejecución. 
+        
+        window.addEventListener("load", contactosFavoritos, false); 
+            
+        </script>
+
+    
+</body>
+</html>
